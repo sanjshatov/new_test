@@ -14,11 +14,10 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         String url = "jdbc:postgresql://" + host + "/" + dbname + "?user=" + username + "&password=" + password;
-//        try {
-            con = DriverManager.getConnection(url, username, password);
-            if(con==null)
-                System.out.println("Нет соединения с БД");
-            else
-                System.out.println("Соединение с БД установлено");
+        con = DriverManager.getConnection(url, username, password);
+        if (con == null)
+            System.out.println("Нет соединения с БД");
+        else
+            System.out.println("Соединение с БД установлено");
     }
 }
